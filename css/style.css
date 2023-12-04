@@ -495,13 +495,14 @@ span {
 }
 
 /* New styles for the viewer counter */
-#viewer-counter {
+/*#viewer-counter {
     display: flex;
     align-items: center;
     position: relative;
 }
 
-#count {
+ #count {
+    disply:none;
     font-weight: bold;
     border-radius: 50%;
     width: 4rem;
@@ -531,7 +532,7 @@ span {
 
 #viewer-counter:hover #viewed-text {
     color: rgba(255, 0, 72, 0.7);
-}
+} */
 
 /* BREAKPOINTS */
 @media (max-width: 1200px) {
