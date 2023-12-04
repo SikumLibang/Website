@@ -85,17 +85,17 @@ function myFunction() {
   }
 
 // Contact form
-  function sendEmail() {
-            var emailAddress = 'imsikumlimbu@gmail.com';
-            var form = document.getElementById('contactForm');
-            var subject = form.elements['subject'].value || 'No Subject';
-            var message = form.elements['message'].value || 'No Message';
+  // function sendEmail() {
+  //           var emailAddress = 'imsikumlimbu@gmail.com';
+  //           var form = document.getElementById('contactForm');
+  //           var subject = form.elements['subject'].value || 'No Subject';
+  //           var message = form.elements['message'].value || 'No Message';
 
-            var mailtoLink = 'mailto:' + emailAddress + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message);
+  //           var mailtoLink = 'mailto:' + emailAddress + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message);
 
-            // Create a temporary link element
-            var tempLink = document.createElement('a');
-            tempLink.href = mailtoLink;
+  //           // Create a temporary link element
+  //           var tempLink = document.createElement('a');
+  //           tempLink.href = mailtoLink;
 
-            // Trigger a click on the link to open the default email client
-            tempLink.click();
+  //           // Trigger a click on the link to open the default email client
+  //           tempLink.click();
