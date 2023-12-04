@@ -27,9 +27,9 @@
   <link rel="icon" type="image/x-icon" href="images/icon.ico">
 </head>
 
-<body>
+<body onload="myLoading()">
   <!-- Loading animation -->
-  <div class="ring">Loading<span id="load"></span></div>
+  <div id="preloader"></div>
 
   <!-- header design -->
   <header class="header">
@@ -229,6 +229,13 @@
 
   <!-- custom js -->
   <script src="js/script.js"></script>
+  <!-- script for Preloader -->
+  <script>
+    var load = document.getElementById('preloader');
+    function myLoading() {
+      load.style.display = 'none';
+    }
+  </script>
 </body>
 
 </html>
