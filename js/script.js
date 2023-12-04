@@ -85,6 +85,12 @@ function myFunction() {
   }
 
 // Contact form
+function sendMessage() {
+            // Perform any client-side validation if needed
+
+            // Display the apology message
+            alert('We apologize for the contact form outage, and we\'re working to resolve it. Please use alternative methods for now.');
+        }
   // function sendEmail() {
   //           var emailAddress = 'imsikumlimbu@gmail.com';
   //           var form = document.getElementById('contactForm');
