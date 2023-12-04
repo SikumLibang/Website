@@ -85,22 +85,17 @@ function myFunction() {
   }
 
 // Contact form
-  document.getElementById('contactForm').addEventListener('submit', function (event) {
-    event.preventDefault();
+  function sendEmail() {
+            var emailAddress = 'imsikumlimbu@gmail.com';
+            var form = document.getElementById('contactForm');
+            var subject = form.elements['subject'].value || 'No Subject';
+            var message = form.elements['message'].value || 'No Message';
 
-    var emailAddress = 'imsikumlimbu@gmail.com';
-    var subject = document.getElementsByName('subject')[0].value || 'No Subject';
-    var body = 'Name: ' + document.getElementsByName('uname')[0].value + '\n' +
-               'Email: ' + document.getElementsByName('email')[0].value + '\n' +
-               'Mobile Number: ' + document.getElementsByName('number')[0].value + '\n' +
-               'Message: ' + document.getElementsByName('message')[0].value;
+            var mailtoLink = 'mailto:' + emailAddress + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message);
 
-    var mailtoLink = 'mailto:' + emailAddress + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+            // Create a temporary link element
+            var tempLink = document.createElement('a');
+            tempLink.href = mailtoLink;
 
-    // Create a temporary link element
-    var tempLink = document.createElement('a');
-    tempLink.href = mailtoLink;
-
-    // Trigger a click on the link to open the default email client
-    tempLink.click();
-});
+            // Trigger a click on the link to open the default email client
+            tempLink.click();
