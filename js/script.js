@@ -84,8 +84,23 @@ function myFunction() {
     }
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
-    // Your website content is now loaded, hide the loading animation
-    var loadingRing = document.querySelector('.ring');
-    loadingRing.style.display = 'none';
-  });
+// Contact form
+  document.getElementById('contactForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    var emailAddress = 'imsikumlimbu@gmail.com';
+    var subject = document.getElementsByName('subject')[0].value || 'No Subject';
+    var body = 'Name: ' + document.getElementsByName('uname')[0].value + '\n' +
+               'Email: ' + document.getElementsByName('email')[0].value + '\n' +
+               'Mobile Number: ' + document.getElementsByName('number')[0].value + '\n' +
+               'Message: ' + document.getElementsByName('message')[0].value;
+
+    var mailtoLink = 'mailto:' + emailAddress + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+
+    // Create a temporary link element
+    var tempLink = document.createElement('a');
+    tempLink.href = mailtoLink;
+
+    // Trigger a click on the link to open the default email client
+    tempLink.click();
+});
