@@ -61,11 +61,25 @@ const typed = new Typed('.multiple-text', {
 
 // Increment viewer count and update the counter on page load
 window.addEventListener("load", function () {
-    let count = parseInt(localStorage.getItem("viewerCount")) || 0;
+    // Define an array of possible starting values
+    const startingValues = ['235', '341', '637'];
+
+    // Get a random index from the array
+    const randomIndex = Math.floor(Math.random() * startingValues.length);
+
+    // Use the randomly selected starting value
+    let count = parseInt(localStorage.getItem("viewerCount")) || parseInt(startingValues[randomIndex]);
+    
+    // Increment the count
     count += 1;
+
+    // Save the updated count to localStorage
     localStorage.setItem("viewerCount", count);
+
+    // Update the counter on the page
     document.getElementById("count").textContent = count;
 });
+
 
 
 function myFunction() {
