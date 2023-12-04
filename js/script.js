@@ -60,12 +60,12 @@ const typed = new Typed('.multiple-text', {
 })
 
 // Increment viewer count and update the counter on page load
-window.addEventListener("load", function () {
-    let count = parseInt(localStorage.getItem("viewerCount")) || 0;
-    count += 1;
-    localStorage.setItem("viewerCount", count);
-    document.getElementById("count").textContent = count;
-});
+// window.addEventListener("load", function () {
+//     let count = parseInt(localStorage.getItem("viewerCount")) || 0;
+//     count += 1;
+//     localStorage.setItem("viewerCount", count);
+//     document.getElementById("count").textContent = count;
+// });
 
 
 
